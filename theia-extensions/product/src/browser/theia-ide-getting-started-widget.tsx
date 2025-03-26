@@ -11,9 +11,7 @@ import * as React from 'react';
 
 import { Message, PreferenceService } from '@theia/core/lib/browser';
 import { inject, injectable } from '@theia/core/shared/inversify';
-import {
-    renderDocumentation, renderDownloads, renderExtendingCustomizing, renderSourceCode, renderSupport, renderTickets, renderWhatIs, renderCollaboration
-} from './branding-util';
+import { renderExtendingCustomizing, renderSupport, renderWhatIs } from './branding-util';
 
 import { GettingStartedWidget } from '@theia/getting-started/lib/browser/getting-started-widget';
 import { VSXEnvironment } from '@theia/vsx-registry/lib/common/vsx-environment';
@@ -73,36 +71,6 @@ export class TheiaIDEGettingStartedWidget extends GettingStartedWidget {
                         {renderSupport(this.windowService)}
                     </div>
                 </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {renderTickets(this.windowService)}
-                    </div>
-                </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {renderSourceCode(this.windowService)}
-                    </div>
-                </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {renderDocumentation(this.windowService)}
-                    </div>
-                </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {this.renderAIBanner()}
-                    </div>
-                </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {renderCollaboration(this.windowService)}
-                    </div>
-                </div>
-                <div className='flex-grid'>
-                    <div className='col'>
-                        {renderDownloads()}
-                    </div>
-                </div>
             </div>
             <div className='gs-preference-container'>
                 {this.renderPreferences()}
@@ -137,7 +105,7 @@ export class TheiaIDEGettingStartedWidget extends GettingStartedWidget {
 
     protected renderHeader(): React.ReactNode {
         return <div className='gs-header'>
-            <h1>Eclipse Theia <span className='gs-blue-header'>IDE</span></h1>
+            <h1>FlowCode</h1>
             {this.renderVersion()}
         </div>;
     }
@@ -152,13 +120,5 @@ export class TheiaIDEGettingStartedWidget extends GettingStartedWidget {
                 {'VS Code API Version: ' + this.vscodeApiVersion}
             </p>
         </div>;
-    }
-
-    protected renderAIBanner(): React.ReactNode {
-        const framework = super.renderAIBanner();
-        if (React.isValidElement<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>(framework)) {
-            return React.cloneElement(framework, { className: 'gs-section' });
-        }
-        return framework;
     }
 }

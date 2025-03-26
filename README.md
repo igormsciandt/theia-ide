@@ -2,7 +2,7 @@
 <div id="theia-logo" align="center">
     <br />
     <img src="https://raw.githubusercontent.com/eclipse-theia/theia-ide/master/theia-extensions/product/src/browser/icons/TheiaIDE.png" alt="Theia Logo" width="300"/>
-    <h3>Eclipse Theia IDE</h3>
+    <h3>FlowCode</h3>
 </div>
 
 <div id="badges" align="center">

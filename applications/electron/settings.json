@@ -1,0 +1,13 @@
+{
+    "[markdown]": {
+        "editor.defaultFormatter": "davidanson.vscode-markdownlint"
+    },
+    "workbench.colorCustomizations": {
+        "[Abyss]": {
+            "activityBar.background": "#ff0000"
+        },
+        "[Monokai*]": {
+            "activityBar.background": "#ff0000"
+        }
+    }
+}
